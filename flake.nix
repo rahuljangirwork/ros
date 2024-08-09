@@ -16,7 +16,7 @@
     { nixpkgs, home-manager, ... }@inputs:
     let
       system = "aarch64-linux";
-      host = "nixbook";
+      host = "ros";
       username = "Rahul";
     in
     {

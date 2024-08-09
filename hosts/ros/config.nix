@@ -103,14 +103,14 @@ in
   };
 
   # Extra Module Options
-  drivers.amdgpu.enable = false;
-  drivers.nvidia.enable = false;
+  drivers.amdgpu.enable = true;
+  drivers.nvidia.enable = true;
   drivers.nvidia-prime = {
     enable = false;
     intelBusID = "";
     nvidiaBusID = "";
   };
-  drivers.intel.enable = false;
+  drivers.intel.enable = true;
   vm.guest-services.enable = false;
   local.hardware-clock.enable = false;
   # Apple Hardware
@@ -126,7 +126,7 @@ in
   networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
 
   # Set your time zone.
-  time.timeZone = "America/Chicago";
+  time.timeZone = "Asia/Kolkata";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -145,6 +145,7 @@ in
 
   programs = {
     firefox.enable = false;
+    google-chrome.enable = true;
     starship = {
       enable = true;
       settings = {
@@ -247,7 +248,6 @@ in
     cmatrix
     lolcat
     htop
-    brave
     libvirt
     lxqt.lxqt-policykit
     lm_sensors
@@ -291,8 +291,18 @@ in
     pavucontrol
     tree
     neovide
+    nano
+    zsh
+    autojump
+    google-chrome
+    vscode
+    postman
+    gparted
+    usbimager
     greetd.tuigreet
   ];
+
+  #dotnet-sdk
 
   fonts = {
     packages = with pkgs; [

@@ -118,7 +118,7 @@ in
   networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
 
   # Set your time zone.
-  time.timeZone = "America/Chicago";
+  time.timeZone = "Asia/Kolkata";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -137,6 +137,7 @@ in
 
   programs = {
     firefox.enable = false;
+    google-chrome.enable = true;
     starship = {
       enable = true;
       settings = {
@@ -245,7 +246,6 @@ in
     cmatrix
     lolcat
     htop
-    brave
     libvirt
     lxqt.lxqt-policykit
     lm_sensors
@@ -272,13 +272,11 @@ in
     virt-viewer
     swappy
     appimage-run
-    networkmanagerapplet
     yad
     inxi
     playerctl
     nh
     nixfmt-rfc-style
-    discord
     libvirt
     swww
     grim
@@ -290,10 +288,20 @@ in
     gimp
     pavucontrol
     tree
-    spotify
     neovide
+    nano
+    zsh
+    autojump
+    google-chrome
+    vscode
+    postman
+    gparted
+    usbimager
     greetd.tuigreet
   ];
+
+#  dotnet-sdk
+
 
   fonts = {
     packages = with pkgs; [
